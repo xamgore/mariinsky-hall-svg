@@ -1,0 +1,104 @@
+* {
+  box-sizing: inherit
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: #f7f7f7;
+}
+
+#demo {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hall {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.hall.ru {
+  background-image: url(https://tickets.mariinsky.ru/img/halls/21/hall_ru_rows.png);
+}
+
+.hall.en {
+  background-image: url(https://tickets.mariinsky.ru/img/halls/21/hall_en_rows.png);
+}
+
+.hall.simplified {
+  background-image: url(hall.png);
+}
+
+.hall * {
+  animation: wireframe-blinking .7s infinite;
+}
+
+.hall.noSVG * {
+  stroke: transparent !important;
+  fill: transparent !important;
+}
+
+
+.button {
+  background-color: #ccc;
+  color: #4b4b4b;
+  position: absolute;
+  top: 0;
+  margin: 0;
+  padding: 2px 5px 5px 5px;
+  font-size: small;
+  cursor: progress;
+}
+
+.button.left {
+  left: 0;
+  border-bottom-right-radius: 10px;
+  padding-right: 8px;
+}
+
+.button.right {
+  right: 0;
+  border-bottom-left-radius: 10px;
+  padding-left: 8px;
+}
+
+.button.top {
+  top: 0;
+  margin: auto;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.button:hover {
+  background-color: #999;
+  color: #f7f7f7;
+}
+
+
+@keyframes wireframe-blinking {
+  0% {
+    opacity: 0;
+  }
+
+  40% {
+    opacity: 1;
+  }
+
+  60% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
